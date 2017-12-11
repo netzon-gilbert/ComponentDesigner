@@ -6,5 +6,7 @@ export default {
         }
     },
     methods: {
+    },
+    mounted() {
     }
 }

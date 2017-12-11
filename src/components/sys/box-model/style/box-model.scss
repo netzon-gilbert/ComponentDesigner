@@ -1,0 +1,38 @@
+$prime-color: green;
+$light-color: #f1f1f1;
+$border: 1px solid $light-color;
+$float: left;
+$shadow: 1px 0px 3px 0px rgba(0, 0, 0, 0.3);
+
+.box-model-wrapper {
+    background: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: $shadow;
+    font-size: 16px;
+    label {
+        color: $prime-color;
+        font-weight: 500;
+    }
+    h1 {
+        color: $prime-color;
+        font-size: 25px;
+    }
+    .box-sides {
+        display: inline-block;
+        padding: 5px;
+        border-right: $border;
+        label {
+            font-weight: 400;
+            color: $prime-color;
+            float: $float;
+        }
+        .side {
+            display: block;
+            sub, sup {
+                float: $float;
+                padding: 5px;
+            }
+        }
+    }
+}

@@ -5,25 +5,55 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 let Sides = () => {
-    return {
-        lef: 0,
-        rig: 0,
-        top: 0,
-        bot: 0
-    }
+    return [
+        {
+            name: 'lef',
+            side: 0
+        },
+        {
+            name: 'rig',
+            side: 0
+        },
+        {
+            name: 'top',
+            side: 0
+        },
+        {
+            name: 'bot',
+            side: 0
+        }
+    ]
 }
 
 const BoxModel = {
-    state: {
-        padding: new Sides(),
-        margin: new Sides(),
-        radius: new Sides(),
-        width: new Sides()
-    }
+    state: [
+        {
+            name: 'padding',
+            sides: new Sides()
+        },
+        {
+            name: 'margin',
+            sides: new Sides()
+        },
+        {
+            name: 'width',
+            sides: new Sides()
+        },
+        {
+            name: 'radius',
+            sides: new Sides()
+        }
+    ]
 }
 
+const Component = {
+    state: {
+        render: false
+    }
+}
 export default new Vuex.Store({
     modules: {
+        comp: Component,
         boxModel: BoxModel
     }
 })
