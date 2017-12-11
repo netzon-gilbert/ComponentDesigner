@@ -35,8 +35,8 @@ export default {
   }
   .tool-box {
     position: fixed;
-    top: 60%;
-    min-height: 40%;
+    top: 50%;
+    min-height: 50%;
     .tool {
       max-width: 600px;
     }

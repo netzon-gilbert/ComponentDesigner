@@ -8,19 +8,23 @@ let Sides = () => {
     return [
         {
             name: 'lef',
-            side: 0
+            side: 0,
+            sname: 'left'
         },
         {
             name: 'rig',
-            side: 0
+            side: 0,
+            sname: 'right'
         },
         {
             name: 'top',
-            side: 0
+            side: 0,
+            sname: 'top'
         },
         {
             name: 'bot',
-            side: 0
+            side: 0,
+            sname: 'bottom'
         }
     ]
 }
