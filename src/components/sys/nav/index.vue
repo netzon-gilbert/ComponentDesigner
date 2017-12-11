@@ -17,7 +17,7 @@
                         <a class="navbar-item">
                             input password
                         </a>
-                         <a class="navbar-item">
+                         <a class="navbar-item" @click="goTo('button')">
                             button
                         </a>
                         <a class="navbar-item">
