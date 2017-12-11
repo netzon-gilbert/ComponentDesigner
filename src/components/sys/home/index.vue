@@ -1,6 +1,7 @@
 <template>
     <div class="home-wrapper">
-        <p>tests tests tests tests tests tests tests tests</p>
+        <h1>Fast front-end designer</h1>
+        <p>Design html components easily, without knowledge in webdevelopment</p>
     </div>
 </template>
 

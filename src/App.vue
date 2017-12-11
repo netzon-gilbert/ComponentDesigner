@@ -2,7 +2,7 @@
   <div id="app">
     <navigation />
     <div class="view"
-      <router-view/>
+      <router-view class="view-page" />
     </div>
   </div>
 </template>
@@ -20,10 +20,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-}
-.view {
-  margin: 20px;
+    background: transparent;
+    .view {
+      padding: 20px;
+      .view-page {
+        margin: auto;
+      }
+  }
 }
 </style>
