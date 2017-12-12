@@ -13,7 +13,6 @@ export default {
             else {
                 this.$store.state.comp.render = false
             }
-            console.log(this.$store.state.comp.render)
         }
     },
     mounted() {
