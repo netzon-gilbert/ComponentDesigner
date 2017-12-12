@@ -11,8 +11,6 @@ export default {
             else {
                 this.$store.state.comp.render = false
             }
-            console.log(this.$store.state.boxShadow.inset.val)
-            console.log(this.$store.state.boxShadow.color.val)
         }
     },
     mounted() {

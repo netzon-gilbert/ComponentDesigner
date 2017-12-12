@@ -28,6 +28,11 @@ export default {
                 name: 'Spread',
                 sname: 'spread-radius',
                 val: 0
+            },
+            {
+                name: 'Opacity',
+                sname: 'opacity',
+                val: 100
             }
         ]
     }

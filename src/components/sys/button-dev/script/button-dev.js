@@ -71,9 +71,44 @@ export default {
             return boxStyles
         },
 
+        boxShadowStyle() {
+            let style = '',
+                shadow = this.$store.state.boxShadow,
+                inset = shadow.inset,
+                color = shadow.color,
+                xpos = shadow.ranges[0],
+                ypos = shadow.ranges[1],
+                blur = shadow.ranges[2],
+                spread = shadow.ranges[3],
+                opacity = shadow.ranges[4]
+
+                function hex_to_RGB(hex) {
+                    let m = hex.match(/^#?([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i),
+                        rgb = {
+                            r: parseInt(m[1], 16),
+                            g: parseInt(m[2], 16),
+                            b: parseInt(m[3], 16)
+                        }
+
+                    return rgb.r + ', ' + rgb.g + ', ' + rgb.b
+                }
+
+                style += 'box-shadow:'
+                style += ' ' + xpos.val + 'px'
+                style += ' ' + ypos.val + 'px'
+                style += ' ' + blur.val + 'px'
+                style += ' ' + spread.val + 'px'
+                style += ' (' + hex_to_RGB(color.val)
+                style += ', ' + opacity.val / 100 + ');'
+
+            //return style
+            console.log(style)
+        },
+
         renderComp() {
             if (this.$store.state.comp.render) {
                 this.styleSheet = this.boxModelStyles()
+                this.boxShadowStyle()
             }
         }
     },
