@@ -1,0 +1,36 @@
+$prime-color: green;
+$light-color: #f1f1f1;
+$border: 1px solid $light-color;
+$float: left;
+$shadow: 1px 0px 3px 0px rgba(0, 0, 0, 0.3);
+
+.box-colors-wrapper {
+    background: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: $shadow;
+    font-size: 16px;
+    label {
+        color: $prime-color;
+        font-weight: 500;
+    }
+    .controls {
+        .tools {
+            .ctr-tool {
+                border-top: $border;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                display: block;
+                sup {
+                    float: left;
+                    input[type=number] {
+                        width: 50px;
+                        outline: none;
+                        border: none;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
