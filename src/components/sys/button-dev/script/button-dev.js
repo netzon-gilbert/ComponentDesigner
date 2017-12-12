@@ -94,21 +94,21 @@ export default {
                 }
 
                 style += 'box-shadow:'
+                style += (inset.val)? ' inset' : ''
                 style += ' ' + xpos.val + 'px'
                 style += ' ' + ypos.val + 'px'
                 style += ' ' + blur.val + 'px'
                 style += ' ' + spread.val + 'px'
-                style += ' (' + hex_to_RGB(color.val)
+                style += ' rgba(' + hex_to_RGB(color.val)
                 style += ', ' + opacity.val / 100 + ');'
-
-            //return style
-            console.log(style)
+                console.log(style)
+            return style
         },
 
         renderComp() {
             if (this.$store.state.comp.render) {
                 this.styleSheet = this.boxModelStyles()
-                this.boxShadowStyle()
+                this.styleSheet += this.boxShadowStyle()
             }
         }
     },
