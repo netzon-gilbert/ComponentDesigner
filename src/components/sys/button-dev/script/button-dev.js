@@ -141,7 +141,8 @@ export default {
                 height = display.size.height,
                 fontSize = display.font.size,
                 wordSpace = display.font.wordSpace,
-                fontFams = display.font.families
+                fontFams = display.font.families,
+                selected = display.font.selectedFont
 
             function oneByOne() {
                 let compStyle = ''
@@ -150,14 +151,13 @@ export default {
                     compStyle += height.sname + ': ' + height.val + 'px;\n'
                     compStyle += wordSpace.sname + ': ' + wordSpace.val + 'px;\n'
                     compStyle += fontSize.sname + ': ' + fontSize.val + 'px;\n'
+                    compStyle += selected.sname + ': ' + selected.val + ';\n'
 
                 return compStyle
             }
 
-            function fontFamily() {
-            }
-
             style += oneByOne()
+            console.log(style)
             return style
         },
 

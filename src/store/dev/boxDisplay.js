@@ -16,6 +16,11 @@ export default {
                 sname: 'word-spacing',
                 val: 2
             },
+            selectedFont: {
+                name: 'Font Family',
+                sname: 'font-family',
+                val: 'Arial,Helmet,Freesans,sans-serif'
+            },
             families: [
                 {
                     name: 'font 1',

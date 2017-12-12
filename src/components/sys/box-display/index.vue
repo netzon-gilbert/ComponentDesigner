@@ -6,8 +6,11 @@
         <div class="controls">
             <div class="tools">
                 <div class="ctr-tool">
-                    <select>
-                        <option v-for="font, key in $store.state.boxDisplay.font.families">
+                    <sup>{{ $store.state.boxDisplay.font.selectedFont.name }}</sup>
+                    <select v-model="$store.state.boxDisplay.font.selectedFont.val">
+                        <option 
+                            v-for="font, key in $store.state.boxDisplay.font.families"
+                            :value="font.val">
                             {{ font.name }}
                         </option>
                     </select>
