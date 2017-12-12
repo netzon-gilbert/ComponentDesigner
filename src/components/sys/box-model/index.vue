@@ -9,7 +9,7 @@
             <span class="side"
                 v-for="each, count in $store.state.boxModel[key].sides">
                 <sub>{{ each.name }}</sub>
-                <sup>{{ each.side }}</sup><br />
+                <sup><input type="number" v-model=" each.side" /></sup><br />
                 <input type="range" v-model="each.side" />
             </span>
         </div>
