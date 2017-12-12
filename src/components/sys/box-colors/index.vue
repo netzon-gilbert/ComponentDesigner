@@ -5,11 +5,20 @@
         <label>Box Colors</label><br />
         <div class="controls">
             <div class="tools">
-                <div class="ctr-tool">
+                <div class="ctr-tool" >
+                    <sup>{{ $store.state.boxColors.background.name }}</sup>
+                    <input type="color" 
+                        v-model="$store.state.boxColors.background.val" />
                 </div>
-            </div>
-            <div class="tools">
+                <div class="ctr-tool" >
+                    <sup>{{ $store.state.boxColors.foreground.name }}</sup>
+                    <input type="color" 
+                        v-model="$store.state.boxColors.foreground.val" />
+                </div>
                 <div class="ctr-tool"
+                    v-for="side, key in $store.state.boxColors.sides">
+                    <sup>{{ side.name }}</sup>
+                    <input type="color" v-model="side.val" />
                 </div>
             </div>
         </div>
