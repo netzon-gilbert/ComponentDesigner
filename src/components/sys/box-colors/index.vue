@@ -15,6 +15,7 @@
                     <input type="color" 
                         v-model="$store.state.boxColors.foreground.val" />
                 </div>
+                <label>border</label>
                 <div class="ctr-tool"
                     v-for="side, key in $store.state.boxColors.sides">
                     <sup>{{ side.name }}</sup>

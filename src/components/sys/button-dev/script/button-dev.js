@@ -105,10 +105,38 @@ export default {
             return style
         },
 
+        boxColorsStyle() {
+            let style = '',
+                colors = this.$store.state.boxColors,
+                back = colors.background,
+                fore = colors.foreground,
+                side = colors.sides
+
+            function enviStyle() {
+                style += back.sname + '-color: ' + back.val + ';\n'
+                style += 'color: ' + fore.val + ';\n'
+                return style
+            }
+
+            function sidesStyle() {
+                for (let i = 0; i < side.length; i++) {
+                    style += 'border-' + side[i].sname + '-color: '
+                    style +=  side[i].val + ';\n'
+                }
+
+                return style
+            }
+
+            style += sidesStyle()
+            style += enviStyle()
+            return style
+        },
+
         renderComp() {
             if (this.$store.state.comp.render) {
                 this.styleSheet = this.boxModelStyles()
                 this.styleSheet += this.boxShadowStyle()
+                this.styleSheet += this.boxColorsStyle()
             }
         }
     },

@@ -16,6 +16,9 @@ $shadow: 1px 0px 3px 0px rgba(0, 0, 0, 0.3);
     }
     .controls {
         .tools {
+            label {
+                color: gray;
+            }
             .ctr-tool {
                 border-top: $border;
                 padding-top: 10px;
