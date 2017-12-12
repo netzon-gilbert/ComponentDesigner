@@ -41,8 +41,8 @@ export default {
   }
   .tool-box {
     position: fixed;
-    top: 50%;
-    min-height: 50%;
+    top: 40%;
+    min-height: 60%;
     .tool {
       display: inline-block;
       float: left;
