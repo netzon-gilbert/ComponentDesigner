@@ -101,7 +101,7 @@ export default {
                 style += ' ' + spread.val + 'px'
                 style += ' rgba(' + hex_to_RGB(color.val)
                 style += ', ' + opacity.val / 100 + ');'
-                console.log(style)
+
             return style
         },
 

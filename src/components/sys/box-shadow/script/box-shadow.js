@@ -3,6 +3,8 @@ export default {
         return {
         }
     },
+    components: {
+    },
     methods: {
         compRender(nput) {
             if (nput) {

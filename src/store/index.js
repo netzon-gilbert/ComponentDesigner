@@ -13,6 +13,7 @@ const Component = {
         render: false
     }
 }
+
 export default new Vuex.Store({
     modules: {
         comp: Component,
