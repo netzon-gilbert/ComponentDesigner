@@ -132,11 +132,41 @@ export default {
             return style
         },
 
+        boxDisplayStyle() {
+            let style = '',
+                display = this.$store.state.boxDisplay,
+
+                opacity = display.opacity,
+                width = display.size.width,
+                height = display.size.height,
+                fontSize = display.font.size,
+                wordSpace = display.font.wordSpace,
+                fontFams = display.font.families
+
+            function oneByOne() {
+                let compStyle = ''
+                    compStyle += opacity.sname + ': ' + opacity.val / 100 + ';\n'
+                    compStyle += width.sname + ': ' + width.val + 'px;\n'
+                    compStyle += height.sname + ': ' + height.val + 'px;\n'
+                    compStyle += wordSpace.sname + ': ' + wordSpace.val + 'px;\n'
+                    compStyle += fontSize.sname + ': ' + fontSize.val + 'px;\n'
+
+                return compStyle
+            }
+
+            function fontFamily() {
+            }
+
+            style += oneByOne()
+            return style
+        },
+
         renderComp() {
             if (this.$store.state.comp.render) {
                 this.styleSheet = this.boxModelStyles()
                 this.styleSheet += this.boxShadowStyle()
                 this.styleSheet += this.boxColorsStyle()
+                this.styleSheet += this.boxDisplayStyle()
             }
         }
     },
