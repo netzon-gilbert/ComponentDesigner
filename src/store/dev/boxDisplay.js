@@ -16,6 +16,11 @@ export default {
                 sname: 'word-spacing',
                 val: 2
             },
+            weight: {
+                name: 'Font Weight',
+                sname: 'font-weight',
+                val: 40
+            },
             selectedFont: {
                 name: 'Font Family',
                 sname: 'font-family',

@@ -24,6 +24,14 @@
                     <input type="range" v-model="$store.state.boxDisplay.font.size.val" />
                 </div>
                 <div class="ctr-tool">
+                    <sup>{{ $store.state.boxDisplay.font.weight.name }}</sup>
+                    <sup>
+                        <input type="number" v-model="$store.state.boxDisplay.font.weight.val" />
+                    </sup>
+                    <br />
+                    <input type="range" v-model="$store.state.boxDisplay.font.weight.val" />
+                </div>
+                <div class="ctr-tool">
                     <sup>{{ $store.state.boxDisplay.font.wordSpace.name }}</sup>
                     <sup>
                         <input type="number" v-model="$store.state.boxDisplay.font.wordSpace.val" />

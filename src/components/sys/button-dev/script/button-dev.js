@@ -142,7 +142,8 @@ export default {
                 fontSize = display.font.size,
                 wordSpace = display.font.wordSpace,
                 fontFams = display.font.families,
-                selected = display.font.selectedFont
+                selected = display.font.selectedFont,
+                weight = display.font.weight
 
             function oneByOne() {
                 let compStyle = ''
@@ -152,6 +153,7 @@ export default {
                     compStyle += wordSpace.sname + ': ' + wordSpace.val + 'px;\n'
                     compStyle += fontSize.sname + ': ' + fontSize.val + 'px;\n'
                     compStyle += selected.sname + ': ' + selected.val + ';\n'
+                    compStyle += weight.sname + ': ' + weight.val * 10 + ';\n'
 
                 return compStyle
             }
