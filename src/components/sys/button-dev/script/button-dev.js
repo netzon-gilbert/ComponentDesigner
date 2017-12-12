@@ -159,7 +159,6 @@ export default {
             }
 
             style += oneByOne()
-            console.log(style)
             return style
         },
 
