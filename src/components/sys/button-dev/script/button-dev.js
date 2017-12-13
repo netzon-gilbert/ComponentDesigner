@@ -8,7 +8,7 @@ export default {
     },
     methods: {
         boxModelStyles() {
-            let box = this.$store.state.boxModel,
+            let box = this.$store.state.boxModel.boxStyles,
                 padding = box[0],
                 margin = box[1],
                 width = box[2],
@@ -148,12 +148,12 @@ export default {
             function oneByOne() {
                 let compStyle = ''
                     compStyle += opacity.sname + ': ' + opacity.val / 100 + ';\n'
-                    compStyle += width.sname + ': ' + width.val + 'px;\n'
-                    compStyle += height.sname + ': ' + height.val + 'px;\n'
+                    compStyle += width.sname + ': ' + width.val * 10 + 'px;\n'
+                    compStyle += height.sname + ': ' + height.val * 10 + 'px;\n'
                     compStyle += wordSpace.sname + ': ' + wordSpace.val + 'px;\n'
                     compStyle += fontSize.sname + ': ' + fontSize.val + 'px;\n'
                     compStyle += selected.sname + ': ' + selected.val + ';\n'
-                    compStyle += weight.sname + ': ' + weight.val * 10 + ';\n'
+                    compStyle += weight.sname + ': ' + weight.val * 30 + ';\n'
 
                 return compStyle
             }

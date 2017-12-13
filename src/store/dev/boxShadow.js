@@ -1,5 +1,7 @@
 export default {
     state: {
+        render: false,
+        stylesheet: '',
         inset:  {
             name: 'Inset',
             val: false

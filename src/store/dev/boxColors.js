@@ -1,5 +1,7 @@
 export default {
     state: {
+        render: false,
+        stylesheet: '',
         background: {
             name: 'back',
             sname: 'background',

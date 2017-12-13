@@ -1,5 +1,7 @@
 export default {
     state: {
+        render: false,
+        stylesheet: '',
         opacity: {
             name: 'Opacity',
             sname: 'opacity',
@@ -68,12 +70,12 @@ export default {
             width: {
                 name: 'Width',
                 sname: 'width',
-                val: 100
+                val: 10
             },
             height:  {
                 name: 'Height',
                 sname: 'height',
-                val: 100
+                val: 10
             }
         }
     }

@@ -7,6 +7,7 @@ export default {
     },
     methods: {
         compRender(nput) {
+            this.$store.commit('boxModelStyles')
             if (nput) {
                 this.$store.state.comp.render = true
             }
